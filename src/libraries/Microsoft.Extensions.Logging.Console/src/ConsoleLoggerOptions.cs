@@ -100,5 +100,18 @@ namespace Microsoft.Extensions.Logging.Console
                 _maxQueuedMessages = value;
             }
         }
+
+        private bool _directWrite = false;
+        /// <summary>
+        /// Gets or sets the desired console logger behavior when about direct write or queue log messages. Defaults to <c>false</c> (queue messages).
+        /// </summary>
+        public bool DirectWrite
+        {
+            get => _directWrite;
+            set
+            {
+                _directWrite = value;
+            }
+        }    
     }
 }
